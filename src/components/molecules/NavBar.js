@@ -9,7 +9,7 @@ import { Web3Context } from '../providers/Web3Provider'
 import NavItem from '../atoms/NavItem'
 import ConnectedAccountAddress from '../atoms/ConnectedAccountAddress'
 import ConnectButton from '../atoms/ConnectButton'
-
+import logo from "C:/Users/7000024016/Downloads/logo1.png"
 const pages = [
   {
     title: 'Market',
@@ -24,7 +24,7 @@ const pages = [
 const NavBar = () => {
   const { account } = useContext(Web3Context)
   const logo = '🖼️'
-
+  // const logo = "C:\\Users\\7000024016\\Downloads\\logo.png"
   return (
     <AppBar position="static">
       <Container maxWidth="100%">
@@ -35,11 +35,12 @@ const NavBar = () => {
             component="div"
             sx={{ p: '10px', flexGrow: { xs: 1, md: 0 }, display: 'flex' }}
           >
-            {logo}
+          {logo}
           </Typography>
           <Box sx={{ flexGrow: 1, display: 'flex' }}>
             {pages.map(({ title, href }) => <NavItem title={title} href={href} key={title}/>)}
           </Box>
+          Karthik : 
           {account ? <ConnectedAccountAddress account={account}/> : <ConnectButton />}
         </Toolbar>
       </Container>

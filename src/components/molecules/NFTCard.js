@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     maxWidth: 345
   },
   media: {
-    height: 0,
+    height: '100%',
     paddingTop: '56.25%', // 16:9
     cursor: 'pointer'
   },
@@ -161,6 +161,7 @@ export default function NFTCard ({ nft, action, updateNFT }) {
         className={classes.media}
         alt={name}
         image={image}
+        height = "100%"
         component="a" onClick={handleCardImageClick}
       />
 
